@@ -50,7 +50,7 @@ function AnimalFight() {
   // }
 
 
-  return <div className='animalFight'>
+  return <section className='animalFight'>
 
     <div className='animal'>
       <div style={{ transform: `scale(${unicornHeight})` }}>🦄</div>
@@ -66,7 +66,7 @@ function AnimalFight() {
 
 
 
-  </div>;
+  </section>;
 }
 
 export default AnimalFight;

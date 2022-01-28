@@ -2,13 +2,15 @@
 import './App.css';
 import AnimalFight from './AnimalFight/AnimalFight';
 import JackBox from './JackBox/JackBox';
+import Parade from './Parade/Parade';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <AnimalFight />
       <JackBox />
-    </div>
+      <Parade />
+    </main>
   );
 }
 

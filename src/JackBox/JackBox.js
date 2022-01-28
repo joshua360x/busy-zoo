@@ -14,12 +14,12 @@ function JackBox() {
       setIsMaskOn(true);
     }
   }
-  return <div className='openCLose'>
+  return <section className='openCLose'>
 
     <JackIn on={isMaskOn} />
     <button onClick={OpenAndCloseBoxToggle}>{`${isMaskOn ? 'Take Mask Off' : 'Put Mask On'}`}</button>
     {/* <button>Close</button> */}
-  </div>;
+  </section>;
 }
 
 export default JackBox;
