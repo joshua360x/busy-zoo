@@ -9,7 +9,7 @@ function Parade() {
     setAnimalArr([...animalArr, animal]);
   }
 
-  return <section >
+  return <section className='paradeSection'>
 
     <h2>Add Any Animal You Choose</h2>
     <div className='parade'>
