@@ -5,7 +5,7 @@ function AnimalFight() {
   const [unicornHeight, setUnicornHeight] = useState(2);
   const [lionHeight, setLionHeight] = useState(2);
   // test with template literal
-  const width = 3;
+  // const width = 3;
 
   // function to handle both height for both addition and subtracton
   // function handleTransFormedHeightForBeasts(beast, mathFunction) {
@@ -26,12 +26,10 @@ function AnimalFight() {
   //   }
   // }
 
-
   function handleLion(mathFunction) {
     if (mathFunction === 'add') {
       setLionHeight(lionHeight + 1);
-    }
-    else {
+    } else {
       setLionHeight(lionHeight - 1);
     }
   }
@@ -39,8 +37,11 @@ function AnimalFight() {
   function handleUnicorn(mathFunction) {
     if (mathFunction === 'add') {
       setUnicornHeight(unicornHeight + 1);
-    }
-    else {
+      console.log(
+        '🚀 ~ file: AnimalFight.js ~ line 42 ~ handleUnicorn ~ unicornHeight',
+        unicornHeight
+      );
+    } else {
       setUnicornHeight(unicornHeight - 1);
     }
   }
@@ -49,24 +50,25 @@ function AnimalFight() {
   //   setLionHeight(lionHeight + 1);
   // }
 
+  return (
+    <section className="animalFight">
+      <div className="animal">
+        <div style={{ fontSize: `${unicornHeight}rem` }}>🦄</div>
+        <div className="btns">
+          <button onClick={() => handleUnicorn('add')}>Increase</button>
+          <button onClick={() => handleUnicorn('subtract')}>Decrease</button>
+        </div>
+      </div>
 
-  return <section className='animalFight'>
-
-    <div className='animal'>
-      <div style={{ transform: `scale(${unicornHeight})` }}>🦄</div>
-      <button onClick={() => handleUnicorn('add')}>Increase</button>
-      <button onClick={() => handleUnicorn('subtract')}>Decrease</button>
-    </div>
-
-    <div className='animal'>
-      <p style={{ transform: `scale(${lionHeight})` }}>🦁</p>
-      <button onClick={() => handleLion('add')}>Increase</button>
-      <button onClick={() => handleLion('subtract')}>Decrease</button>
-    </div>
-
-
-
-  </section>;
+      <div className="animal">
+        <div style={{ fontSize: `${lionHeight}rem` }}>🦁</div>
+        <div className="btns">
+          <button onClick={() => handleLion('add')}>Increase</button>
+          <button onClick={() => handleLion('subtract')}>Decrease</button>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default AnimalFight;

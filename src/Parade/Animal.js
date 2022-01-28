@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Animal(props) {
+export default function Animal({ animals }) {
   return <>
     {
-      props.animals.map((animal, i) => 
+      animals.map((animal, i) => 
         <div key={`${animal}-${i}`}>{`${animal === 'zebra' ? '🦓' : animal === 'elephant' ? '🐘' : animal === 'panda' ? '🐼' : ''}`}</div>
       )
 

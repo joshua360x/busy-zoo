@@ -13,8 +13,10 @@
   padding: 2rem;
   background-color: cadetblue;
   margin: 10px;
-  width: 200px;
-  height: 200px;
+  width: 50vh;
+  height: 40vh;
+  justify-content: space-between;
+  overflow: scroll;
 }
 
 .animal p {
@@ -26,5 +28,10 @@
   width: 100px;
   height: 20px;
   align-self: center;
-  position: sticky;
+
+}
+
+.btns {
+  justify-self: flex-end;
+  align-self: flex-end;
 }
