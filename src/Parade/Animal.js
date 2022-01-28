@@ -1,10 +1,12 @@
 import React from 'react';
+import AnimalEmoji from './AnimalEmoji';
+
 
 export default function Animal({ animals }) {
   return <>
     {
       animals.map((animal, i) => 
-        <div key={`${animal}-${i}`}>{`${animal === 'zebra' ? '🦓' : animal === 'elephant' ? '🐘' : animal === 'panda' ? '🐼' : ''}`}</div>
+        <AnimalEmoji key={`${animal}-${i}`} animal={animal} />
       )
 
     }
