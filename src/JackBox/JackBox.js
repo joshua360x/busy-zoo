@@ -4,21 +4,21 @@ import './JackBox.css';
 
 
 function JackBox() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMaskOn, setIsMaskOn] = useState(false);
 
   function OpenAndCloseBoxToggle() {
-    if (isOpen) {
-      setIsOpen(false);
+    if (isMaskOn) {
+      setIsMaskOn(false);
     }
     else {
-      setIsOpen(true);
+      setIsMaskOn(true);
     }
   }
   return <div className='openCLose'>
 
-    <JackIn on={isOpen} />
-    <button>Open</button>
-    <button>Close</button>
+    <JackIn on={isMaskOn} />
+    <button onClick={OpenAndCloseBoxToggle}>{`${isMaskOn ? 'Take Mask Off' : 'Put Mask On'}`}</button>
+    {/* <button>Close</button> */}
   </div>;
 }
 
