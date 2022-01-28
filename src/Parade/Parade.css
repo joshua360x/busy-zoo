@@ -19,3 +19,10 @@
   margin: 10px;
 }
 
+.paradeSection button:hover {
+  background-color: antiquewhite;
+  border: navajowhite;
+  cursor: pointer;
+
+}
+
