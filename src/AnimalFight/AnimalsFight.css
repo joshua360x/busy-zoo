@@ -1,0 +1,30 @@
+
+
+.animalFight {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  
+}
+
+.animal {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: cadetblue;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.animal p {
+  padding-bottom: 10px;
+}
+
+.animal button {
+  margin: 10px;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+  position: sticky;
+}
