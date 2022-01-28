@@ -1,0 +1,37 @@
+
+
+.animalFight {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  
+}
+
+.animal {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: cadetblue;
+  margin: 10px;
+  width: 50vh;
+  height: 40vh;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+.animal p {
+  padding-bottom: 10px;
+}
+
+.animal button {
+  margin: 10px;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+
+}
+
+.btns {
+  justify-self: flex-end;
+  align-self: flex-end;
+}
