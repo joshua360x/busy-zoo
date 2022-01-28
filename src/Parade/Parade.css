@@ -1,0 +1,18 @@
+
+
+.parade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+  padding: 1rem;
+}
+
+.parade div {
+  margin: 10px;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+
+
