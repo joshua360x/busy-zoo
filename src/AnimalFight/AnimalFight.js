@@ -2,43 +2,66 @@ import React, { useState } from 'react';
 import './AnimalsFight.css';
 
 function AnimalFight() {
-  const [unicornHeight, setUnicornHeight] = useState(0);
-  const [lionHeight, setLionHeight] = useState(0);
+  const [unicornHeight, setUnicornHeight] = useState(2);
+  const [lionHeight, setLionHeight] = useState(2);
   // test with template literal
   const width = 3;
 
   // function to handle both height for both addition and subtracton
-  function handleTransFormedHeightForBeasts(beast, mathFunction) {
-    if (beast === 'unicorn' && mathFunction === 'add') {
-      setUnicornHeight(unicornHeight + 1);
-    }
-    else if (beast === 'unicorn' && mathFunction === 'subtract') {
-      setUnicornHeight(unicornHeight - 1);
-    }
-    else if (beast === 'lion' && mathFunction === 'add') {
+  // function handleTransFormedHeightForBeasts(beast, mathFunction) {
+  //   if (mathFunction === 'add' && beast === 'unicorn') {
+  //     setUnicornHeight(unicornHeight + 1);
+  //   }
+  //   else if (mathFunction === 'subtract' && beast === 'unicorn') {
+  //     setUnicornHeight(unicornHeight - 1);
+  //   }
+  //   else if (mathFunction === 'add' && beast === 'lion') {
+  //     setLionHeight(lionHeight + 1);
+  //   }
+  //   else if (mathFunction === 'subtract' && beast === 'lion') {
+  //     setLionHeight(lionHeight - 1);
+  //   }
+  //   else {
+  //     alert('Invalid Arguments, please check parameters');
+  //   }
+  // }
+
+
+  function handleLion(mathFunction) {
+    if (mathFunction === 'add') {
       setLionHeight(lionHeight + 1);
     }
-    else if (beast === 'lion' && mathFunction === 'subtract') {
+    else {
       setLionHeight(lionHeight - 1);
     }
+  }
+
+  function handleUnicorn(mathFunction) {
+    if (mathFunction === 'add') {
+      setUnicornHeight(unicornHeight + 1);
+    }
     else {
-      alert('Invalid Arguments, please check parameters');
+      setUnicornHeight(unicornHeight - 1);
     }
   }
+  // function handleLionAdd() {
+
+  //   setLionHeight(lionHeight + 1);
+  // }
 
 
   return <div className='animalFight'>
 
     <div className='animal'>
-      <p style={{ transform: `scale(${width})` }}>🦄</p>
-      <button onClick={() => handleTransFormedHeightForBeasts('unicorn', 'add')}>Increase</button>
-      <button onClick={() => handleTransFormedHeightForBeasts('unicorn', 'subtract')}>Decrease</button>
+      <div style={{ transform: `scale(${unicornHeight})` }}>🦄</div>
+      <button onClick={() => handleUnicorn('add')}>Increase</button>
+      <button onClick={() => handleUnicorn('subtract')}>Decrease</button>
     </div>
 
     <div className='animal'>
-      <p>🦁</p>
-      <button onClick={() => handleTransFormedHeightForBeasts('lion', 'add')}>Increase</button>
-      <button onClick={() => handleTransFormedHeightForBeasts('lion', 'subtract')}>Decrease</button>
+      <p style={{ transform: `scale(${lionHeight})` }}>🦁</p>
+      <button onClick={() => handleLion('add')}>Increase</button>
+      <button onClick={() => handleLion('subtract')}>Decrease</button>
     </div>
 
 
