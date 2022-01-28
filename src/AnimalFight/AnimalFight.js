@@ -37,10 +37,7 @@ function AnimalFight() {
   function handleUnicorn(mathFunction) {
     if (mathFunction === 'add') {
       setUnicornHeight(unicornHeight + 1);
-      console.log(
-        '🚀 ~ file: AnimalFight.js ~ line 42 ~ handleUnicorn ~ unicornHeight',
-        unicornHeight
-      );
+
     } else {
       setUnicornHeight(unicornHeight - 1);
     }
